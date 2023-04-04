@@ -1,0 +1,114 @@
+﻿<Window x:Class="StudentDiary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentDiary"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="650"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#ABC0DF">
+        <StackPanel>
+            <TextBlock
+                Text="Авторизация"
+                Margin="0 60 0 0"
+                FontSize="50"
+                HorizontalAlignment="Center" 
+                Foreground="#284D79" FontWeight="Bold"
+                 
+                />
+            <TextBlock
+                Text="Логин"
+                Margin="120,40,400,0"
+                FontSize="24"
+                HorizontalAlignment="Center"
+                Width="116"
+                Foreground="#284D79"
+                />
+            <TextBox Name="TbLogin" x:FieldModifier="public" 
+                Margin="0"
+                     Width="400"
+                     Height="40"
+                     FontSize="24"
+                     Text="2"/>
+            <TextBlock
+                Text="Пароль"
+                FontSize="24"
+                Margin="120,40,400,0" 
+                Foreground="#284D79"
+                />
+            <TextBox
+                x:Name="TbPassword"
+                Margin="0"
+                     Width="400"
+                     Height="40"
+                     FontSize="24"
+                Text="2"/>
+
+            <TextBlock
+                Text="Введите текст с картинки"
+                FontSize="24"
+                Margin="0 20 0 0 "
+                Foreground="#284D79"
+                Height="36" 
+                Width="392"
+                />
+            <WrapPanel
+                Margin=" 30 0">
+                <TextBlock
+                x:Name="tbPicCapcha"    
+                FontSize="24" 
+                Height="44"
+                Width="270"
+                TextAlignment="Center"
+                />
+                <Button
+                    x:Name="btnReCapcha"
+                    Content="Создать капчу для входа"
+                    Foreground="#284D79"
+                    Background="#6D94C4"
+                    Width="220"
+                    FontSize="16" Click="btnReCapcha_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="30"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+            </WrapPanel>
+
+
+            <TextBox x:Name="TbCapcha"
+                     Margin="0 10 0 0"
+                     Width="400"
+                     Height="40"
+                     FontSize="24"
+                     />
+            <Button x:Name="BtnAuth"
+                    Content="Авторизироваться"
+                    FontSize="30"
+                    Margin="100 70 70 20"
+                    Foreground="#284D79"
+                    Background="#6D94C4" 
+                    Click="BtnAuth_Click" Height="60" Width="406" 
+                    >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="40"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <TextBlock 
+                x:Name="txtReg"
+                Text="Нет аккаунта? Зарегистрироваться"
+                HorizontalAlignment="Center"
+                FontSize="20"
+                Foreground="AliceBlue"
+                MouseLeftButtonUp="txtReg_MouseLeftButtonUp"
+                MouseEnter="txtReg_MouseEnter"
+                MouseLeave="txtReg_MouseLeave"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

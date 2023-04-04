@@ -1,0 +1,120 @@
+﻿<Page x:Class="StudentDiary.Pages.WorkerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StudentDiary.Pages"
+      mc:Ignorable="d" 
+     d:DesignHeight="688" d:DesignWidth="1024"
+      Title="WorkerPage">
+
+    <Grid>
+        <WrapPanel>
+            <TextBlock Text="Поиск"
+                       Margin="10"
+                       FontSize="15"/>
+
+            <TextBox x:Name="TxbSearch"
+                     Width="200"
+                     Height="25"
+                     FontSize="18" 
+                     VerticalContentAlignment="Center"
+                     TextChanged ="TxbSearch_TextChanged"/>
+
+            <TextBlock Text="Сортировка"
+                        Margin="10"
+                       FontSize="15"/>
+            <ComboBox x:Name="CmbSort"
+                      Width="200"
+                      Height="25" 
+                      SelectionChanged ="CmbSort_SelectionChanged"/>
+        </WrapPanel>
+        <ListView x:Name="listviewUsers"  
+                  Margin="0 50 0 0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding User.FirstName}" 
+                      Header="Имя" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding User.LastName}" 
+                      Header="Фамилия" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=User.Patronymic}" 
+                      Header="Отчество" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=User.IdLogin}" 
+                      Header="Логин" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=User.Phone}" 
+                      Header="Номер телефона" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=User.DateOfBirth}" 
+                      Header="Дата рождения" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=User.IdRol}" 
+                      Header="IdRole" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <WrapPanel Background="#ABC0DF" Margin="0,619,0,0">
+            <Button
+                x:Name="btnAdd"
+                Height="70"
+                Width="249"
+                Content="Добавить"
+                FontSize="24"
+                Foreground="#284D79"
+                Background="#6D94C4" 
+                Click="btnAdd_Click" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="40"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button 
+                Margin="7 0 7 0"
+                x:Name="btnRe"
+                Height="70"
+                Width="249"
+                Content="Изменить"
+                FontSize="24"
+                Foreground="#284D79"
+                Background="#6D94C4" 
+                Click="btnRe_Click" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="40"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button 
+                x:Name="btnDelete"
+                Height="70"
+                Width="249"
+                Content="Удалить"
+                FontSize="24"
+                Foreground="#284D79"
+                Background="#6D94C4"
+                Click="btnDelete_Click" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="40"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button
+                x:Name="btnUpdate"
+                Content="Обновить"
+                Height="70"
+                Width="249"
+                Margin=" 7 0 0 0"
+                FontSize="24"
+                Foreground="#284D79"
+                Background="#6D94C4" 
+                Click="btnUpdate_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="40"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </WrapPanel>
+
+
+    </Grid>
+</Page>

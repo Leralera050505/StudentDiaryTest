@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1c805a0b1be049628a3900a5a293b88d" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="AksBelModel.Authorization" Width="1.5" PointX="0.75" PointY="4.625" />
+        <EntityTypeShape EntityType="AksBelModel.Gender" Width="1.5" PointX="0.75" PointY="1.625" />
+        <EntityTypeShape EntityType="AksBelModel.Grade" Width="1.5" PointX="5.25" PointY="10.625" />
+        <EntityTypeShape EntityType="AksBelModel.Group" Width="1.5" PointX="3" PointY="10.5" />
+        <EntityTypeShape EntityType="AksBelModel.Journal" Width="1.5" PointX="7.5" PointY="1.375" />
+        <EntityTypeShape EntityType="AksBelModel.Lesson" Width="1.5" PointX="5.25" PointY="8.125" />
+        <EntityTypeShape EntityType="AksBelModel.Rol" Width="1.5" PointX="0.75" PointY="7.875" />
+        <EntityTypeShape EntityType="AksBelModel.Student" Width="1.5" PointX="5.25" PointY="1.5" />
+        <EntityTypeShape EntityType="AksBelModel.SubjectArea" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="AksBelModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="9.25" />
+        <EntityTypeShape EntityType="AksBelModel.TimeTable" Width="1.5" PointX="7.5" PointY="5.125" />
+        <EntityTypeShape EntityType="AksBelModel.TypeEducation" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="AksBelModel.User" Width="1.5" PointX="3" PointY="3.75" />
+        <EntityTypeShape EntityType="AksBelModel.Worker" Width="1.5" PointX="5.25" PointY="4.5" />
+        <AssociationConnector Association="AksBelModel.FK_User_Authorization" />
+        <AssociationConnector Association="AksBelModel.FK_User_Gender" />
+        <AssociationConnector Association="AksBelModel.FK__Journal__IdGrade__5070F446" />
+        <AssociationConnector Association="AksBelModel.FK__Group__TypeEduca__5441852A" />
+        <AssociationConnector Association="AksBelModel.FK__TimeTable__IdGro__5CD6CB2B" />
+        <AssociationConnector Association="AksBelModel.FK_Student_Group" />
+        <AssociationConnector Association="AksBelModel.FK__Journal__IdLesso__4F7CD00D" />
+        <AssociationConnector Association="AksBelModel.FK__Journal__IdStude__5165187F" />
+        <AssociationConnector Association="AksBelModel.FK__TimeTable__IdLes__5AEE82B9" />
+        <AssociationConnector Association="AksBelModel.FK_User_Rol" />
+        <AssociationConnector Association="AksBelModel.FK_Student_User" />
+        <AssociationConnector Association="AksBelModel.FK_Worker_SubjectArea" />
+        <AssociationConnector Association="AksBelModel.FK__TimeTable__IdWor__5BE2A6F2" />
+        <AssociationConnector Association="AksBelModel.FK_Worker_User" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

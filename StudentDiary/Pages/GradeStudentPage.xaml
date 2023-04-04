@@ -1,0 +1,44 @@
+﻿<Page x:Class="StudentDiary.Pages.GradeStudentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StudentDiary.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GradeStudentPage">
+
+    <Grid>
+        <WrapPanel>
+            <TextBlock Text="Поиск"
+                       Margin="10"
+                       FontSize="15"/>
+
+            <TextBox x:Name="TxbSearch"
+                     Width="200"
+                     Height="35"
+                     FontSize="18" 
+                     VerticalContentAlignment="Center"
+                   />
+
+            <TextBlock Text="Сортировка"
+                        Margin="10"
+                       FontSize="15"/>
+            <ComboBox x:Name="CmbSort"
+                      Width="200"
+                      Height="35" 
+                    />
+        </WrapPanel>
+        <ListView x:Name="listviewLeson"  
+                  Margin="0,0,0,69" >
+            <ListView.View >
+                <GridView >
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Lesson.NameLesson}" 
+                      Header="Предмет" Width="100" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Grade.Grade}" 
+                      Header="Оценка" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>
